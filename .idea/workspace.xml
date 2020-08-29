@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a06ff9ab-df7b-4f25-870a-2a59d90a81ae" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.2" />
+  <component name="ProjectId" id="1gb1JUdMkmemWR09ICQO00uBOu5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="SQL Dialects" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="register.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/safegas/register.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.register.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a06ff9ab-df7b-4f25-870a-2a59d90a81ae" name="Default Changelist" comment="" />
+      <created>1598368406321</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598368406321</updated>
+      <workItem from="1598368407940" duration="7278000" />
+      <workItem from="1598431712821" duration="6113000" />
+      <workItem from="1598461179945" duration="4767000" />
+      <workItem from="1598516994079" duration="6222000" />
+      <workItem from="1598538416114" duration="7392000" />
+      <workItem from="1598687375442" duration="451000" />
+      <workItem from="1598692602467" duration="1883000" />
+      <workItem from="1598703756449" duration="599000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="364" y="0" width="638" height="726" key="#PHP" timestamp="1598377711310">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="364" y="0" width="638" height="726" key="#PHP/0.0.1366.728@0.0.1366.728" timestamp="1598377711309" />
+    <state x="416" y="112" width="524" height="499" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598378809589">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="416" y="112" width="524" height="499" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1598378809589" />
+    <state x="465" y="122" width="424" height="482" key="FileChooserDialogImpl" timestamp="1598693398837">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="465" y="122" width="424" height="482" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598693398837" />
+    <state x="500" y="289" width="355" height="146" key="NewPhpFileDialog" timestamp="1598462205927">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="500" y="289" width="355" height="146" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1598462205927" />
+    <state x="179" y="0" key="SettingsEditor" timestamp="1598693635330">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="179" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1598693635330" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1598377201338">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1598377201338" />
+  </component>
+</project>
