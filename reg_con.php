@@ -2,18 +2,21 @@
 
 session_start();
 
-if (isset($_POST['x'])){
-    $name = $_POST['x'];
-    $email = $_POST['y'];
-    $password = $_POST['z'];
+if (isset($_POST['btnsubmit'])){
+
+    $name = ($_POST['x']);
+    $email = ($_POST['y']);
+    $password = ($_POST['z']);
     $encpassword = md5($password);
 
 
     $conn = mysqli_connect("localhost","root","","safegas");
+
     if (!$conn){
         echo "failed to connect";
     }else{
-        $insert = mysqli_query($conn,"INSERT INTO `registeruser`(`id`, `name`, `email`, `password`) VALUES ('null','$name','$email','$encpassword')");
+        $insert_query = "INSERT INTO `registeruser`(`id`, `name`, `email`, `password`) VALUES (null,'$name','$email','$encpassword')";
+        $insert = mysqli_query($conn,$insert_query);
         if (!$insert){
             echo "failed to save1";
         }else{
