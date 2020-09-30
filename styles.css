@@ -1,6 +1,11 @@
 body,html{
+    background: linear-gradient(rgba(0, 0, 50, 0.5),rgba(0, 0, 50, 0.5)),url(images/basicnavbar.jpeg);
+    background-size: cover;
+    background-position: center;
     margin: 0;
-    padding: 0;
+    padding: 0 10px;
+    font-family: sans-serif;
+    height: 100%;
 }
 
 header{
@@ -51,3 +56,53 @@ img{
     width: 100%;
     margin-top: -16px;
 }
+/*add qr code scanner css*/
+
+
+
+h2 {
+    color: #f1f5f3;
+    margin-left: 42%;
+}
+
+
+.scann{
+    text-transform: uppercase;
+    transition: all 4s ease-in-out;
+    margin-top: 2%;
+    margin-left: 42%;
+    font-size: 32px;
+    line-height: 10px;
+}
+
+/* qr code  */
+.container {
+    text-align: center;
+    margin: 0;
+  }
+  
+  .qr-canvas {
+    margin: auto;
+    width: calc(100% - 20px);
+    max-width: 400px;
+  }
+  
+.btn-scan-qr {
+    cursor: pointer;
+  }
+  
+.btn-scan-qr img {
+    height: 10em;
+    padding: 15px;
+    margin: 15px;
+    background: white;
+  }
+  
+.qr-result {
+    font-size: 1.2em;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 700px;
+    background-color: white;
+  }
+  
