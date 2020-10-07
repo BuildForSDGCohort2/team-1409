@@ -12,36 +12,31 @@
     <script src="bootstrap/js/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
 </head>
-<body>
 <header>
     <h1>SAFE<span>GAS</span></h1>
     <nav>
         <ul>
             <li><a href="index.html"><b>Home</b></a></li>
-            <li><a href="login.html"><b>Register</b></a></li>
             <li><a href="contact.html"><b>Contact Us</b></a></li>
-            <li><a href="about.html"><b>About</b></a></li>
+            <li><a href="login.html"><b>Register</b></a></li>
         </ul>
     </nav>
 </header>
-    <div class="container">
-        <div class="login-form">
-            <div class="Login">
-                <h3>Login</h3>
-                <form action="login.php" method="POST">
-                    <input type="text" placeholder="Username" name="username"><br>
-                    <input type="text" placeholder="Password" name="password">
-                    <div class="btn">Log In</div>
-                    <div class="h">
-                        <a href="#" class="u">Forgot password?</a>
-                        <a href="register.php" class="i">Sign Up</a></div>
-                </form>
-
-            </div>
-
-
-        </div>
-
+<body>
+    <div>
+        <h1 class="kichwa">Welcome Back</h1>
+    </div>
+    <div class="contact-title">
+        <h2>It's Always Nice Seeing You Again</h2>
+    
+    </div>
+    <div class="login-form">
+        <form id="login-form" method="POST" action="contact.php">
+            <input name="name" type="text" class="login-control" placeholder="Your Email" required><br>
+            <input name="email" type="text" class="login-control" placeholder="Your Password" required><br>
+            <input type="submit" class="login-control submit" value="LOG IN">
+            <!--        <button type="button" class="btn btn-warning">SEND MESSAGE</button>-->
+        </form>
     </div>
 </body>
 </html>

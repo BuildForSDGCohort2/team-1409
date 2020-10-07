@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 50, 0.5),rgba(0, 0, 50, 0.5)),url(images/th.jpeg);
+    background: linear-gradient(rgba(0, 0, 50, 0.5),rgba(0, 0, 50, 0.5)),url(images/contact.jpg);
     background-size: cover;
     background-position: center;
     font-family: sans-serif;
@@ -18,7 +18,7 @@ body{
     text-transform: uppercase;
     transition: all 4s ease-in-out;
     margin-top: 5%;
-    margin-left: 40%;
+    margin-left: 37%;
     font-size: 32px;
     line-height: 10px;
 }
@@ -32,7 +32,7 @@ form{
 
 }
 
-.login-control{
+.reg-control{
     width: 500px;
     background: transparent;
     border: none;
@@ -55,7 +55,7 @@ form .submit{
     font-weight: bold;
     letter-spacing: 2px;
     height: 50px;
-    width: 400px;
+    width: 600px;
     margin-top: 20px;
 }
 
