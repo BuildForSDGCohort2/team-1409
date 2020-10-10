@@ -1,39 +1,58 @@
 <?php /** @noinspection SpellCheckingInspection **/
-
 session_start();
-$conn = mysqli_connect("localhost","root","","safegas");
-if (isset($_POST['btnsubmit'])){
-    $name = ($_POST['x']);
-    $email = ($_POST['y']);
-    $password = ($_POST['z']);
-    $password2 = ($_POST['b']);
+//open a new connection to the server
+$mysqli = new mysqli('localhost', 'root', '1234', 'safegas');
+//Output any connection error
+if ($mysqli->connect_error) {
+    die('Error : (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error);
+}
 
+$fname = mysqli_real_escape_string($mysqli, $_POST['fname']);
+$lname = mysqli_real_escape_string($mysqli, $_POST['lname']);
+$cname = mysqli_real_escape_string($mysqli, $_POST['cname']);
+$email = mysqli_real_escape_string($mysqli, $_POST['email']);
+$password = mysqli_real_escape_string($mysqli, $_POST['password']);    
+//VALIDATION
 
-// check all the fields are been filled
-    if ($name=="" || $email=="" || $password=="" ||$password2==""){
-        echo '<script>alert("please input all fields")</script>';
-    }
-    // check if passwords matches
-    if ($password == $password2){
-        //then encrypt
-        $encpassword = sha1(md5($password));
-    }else{
-        echo '<script>alert("passwords do not match")</script>';
-    }
+if (strlen($fname) < 2) {
+    echo 'fname';
+} elseif (strlen($lname) < 2) {
+    echo 'lname';
+} elseif (strlen($cname) < 2) {
+    echo 'cname';
+} elseif (strlen($email) <= 4) {
+    echo 'eshort';
+} elseif (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+    echo 'eformat';
+} elseif (strlen($password) < 8) {
+    echo 'pshort';
+} else {//PASSWORD ENCRYPT
+	$spassword = password_hash($password, PASSWORD_BCRYPT, array('cost' => 12));
 
-    if (!$conn){
-        echo "failed to connect";
-    }else{
-        $insert_query = "INSERT INTO registeruser(`id`, `name`, `email`, `password`) VALUES (null,'$name','$email','$encpassword')";
-        $insert = mysqli_query($conn,$insert_query);
-        if (!$insert){
-            echo '<script>alert("failed to save1")</script>';
-        }else{
-            echo '<script>alert("saved succesfully")</script>';
-//            echo "$name saved succesfully";
-//            header("location:register.php");
+    $query = "SELECT * FROM registrationtable WHERE email='$email'";
+	$result = mysqli_query($mysqli, $query) or die(mysqli_connect_error());
+	$num_row = mysqli_num_rows($result);
+	$row = mysqli_fetch_array($result);
+    if ($num_row < 1) {
+
+        $insert_row = $mysqli->query("INSERT INTO registrationtable (fname, lname, cname, email, password) VALUES ('$fname', '$lname', '$cname', '$email', '$spassword')");
+
+        if ($insert_row) {
+
+            $_SESSION['login'] = $mysqli->insert_id;
+            $_SESSION['fname'] = $fname;
+            $_SESSION['lname'] = $lname;
+
+            echo 'true';
+
         }
+
+    } else {
+
+        echo 'false';
+
     }
+    
 }
 
 ?>

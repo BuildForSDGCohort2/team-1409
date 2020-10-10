@@ -1,34 +1,39 @@
 <?php
+session_start();
 
-//get values
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+$email = $_POST['email'];
+$password = $_POST['password'];
 
-    //to prevent sql injection
-    $username = stripslashes($username);
-    $password = stripslashes($password);
-    $username = mysqli_real_escape_string($username);
-    $password = mysqli_real_escape_string($password);
+//Open a new connection to the MySQL server
+$mysqli = new mysqli('localhost', 'root', '1234', 'safegas');
 
-    //connect to the db
-    mysqli_connect("localhost","root","","safegas");
 
-    //query the db
-    $result = mysqli_query("select * from registeruser where username = '$username' and password = '$password'")
-    or die("failed to query database " mysqli_error());
-    $row = mysqli_fetch_array($result);
-    if($row['username'] == $username && $row['password'] == $password){
-        echo "login success";
-    }else{
-        echo "failed to login";
+//Output any connection error
+if ($mysqli->connect_error) {
+    die('Error : (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error);
+}
 
+$query = "SELECT * FROM registrationtable WHERE email='$email'";
+$result = mysqli_query($mysqli, $query) or die(mysqli_connect_error());
+$num_row = mysqli_num_rows($result);
+$row = mysqli_fetch_array($result);
+
+if ($num_row >= 1) {
+
+    if (password_verify($password, $row['password'])) {
+
+        $_SESSION['login'] = $row['id'];
+        $_SESSION['fname'] = $row['fname'];
+        $_SESSION['lname'] = $row['lname'];
+        echo 'true';
+    }
+    else {
+        echo 'false';
     }
 
-
-
-
-
-
+} else {
+    echo 'false';
+}
 
 
 
