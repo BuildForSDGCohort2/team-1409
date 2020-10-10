@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Safe Gas</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+	
+	<!-- Script -->
+	<script type="text/javascript">
+        		$(document).ready(function(){
+			
+			   $("#login").click(function(){
+				
+					email=$("#email").val();
+					password=$("#password").val();
+					 $.ajax({
+						type: "POST",
+						url: "login.php",
+						data: "email="+email+"&password="+password,
+						success: function(html){
+						  if(html=='true')
+						  {
+							  
+							  $("#add_err2").html('<div class="alert alert-success"> \
+													<strong>Authenticated</strong> \ \
+												</div>');
+
+							window.location.href = "blog.php";
+						  
+						  } else if (html=='false') {
+								$("#add_err2").html('<div class="alert alert-danger"> \
+													<strong>Authentication</strong> failure. \ \
+												</div>');
+								
+						  
+						  } else {
+								$("#add_err2").html('<div class="alert alert-danger"> \
+													<strong>Error</strong> processing request. Please try again. \ \
+												</div>');
+						  }
+						},
+						beforeSend:function()
+						{
+                            $("#add_err2").html("loading...");
+						}
+					});
+					 return false;
+				});
+});
+    </script>
+</head>
+<header>
+    <h1>SAFE<span>GAS</span></h1>
+    <nav>
+        <ul>
+            <li><a href="index.html"><b>Home</b></a></li>
+            <li><a href="contact.html"><b>Contact Us</b></a></li>
+            <li><a href="login.html"><b>Register</b></a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <div>
+        <h1 class="kichwa">Welcome Back</h1>
+    </div>
+    <div class="contact-title">
+        <h2>It's Always Nice Seeing You Again</h2>
+    
+    </div>
+    <div class="login-form">
+        <div id="add_err2" style="width:100px; height:50px; float:center;"></div>
+        <form id="login-form" method="POST" action="contact.php">
+            <input name="name" type="text" class="login-control" placeholder="Your Email" required><br>
+            <input name="email" type="text" class="login-control" id="login" placeholder="Your Password" required><br>
+            <input type="submit" class="login-control submit" value="LOG IN">
+            <!--        <button type="button" class="btn btn-warning">SEND MESSAGE</button>-->
+        </form>
+    </div>
+</body>
+</html>

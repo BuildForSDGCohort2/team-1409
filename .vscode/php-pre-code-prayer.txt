@@ -1,0 +1,13 @@
+//our dear php who art in binary,
+hallowed be thy typesystem,
+thy monoids come,
+thy will be done on vscode as it is in phpstorm,
+give us this day our daily recursion,
+and forgive us of our sideeffects and infinite loops,
+lead us not into imperative languages,
+but deliver us from mutation,
+for thine is thy type system the queries.
+and the pure functions, forever and ever.
+in the name of filter map and reduce
+amen.
+//
